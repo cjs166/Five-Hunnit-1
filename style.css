@@ -1,11 +1,28 @@
-
-
 .container{
 margin-left: auto;
 margin-right: auto;
     width:1000px;
-border: 10px outset;
-
+}
+#ourContact {
+    text-align: center;
+}
+#comments{
+    width:800px;
+    height:200px;
+    margin-left:100px;
+    margin-bottom: 50px;
+    }
+#commentButton {
+    width:200px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+#commentBlurb {
+    margin-left: 50px;
+}
+#user{
+    margin-left: 100px;
+    width: 175px;
 }
  .top-content{
  padding:15px;
@@ -152,12 +169,12 @@ border: 10px outset;
  margin-left: auto;
  margin-right: auto;
  }
- .description{
+ .description(
  margin-left: auto;
  margin-right: auto;
  clear:left;
  float:left;
- }
+ )
 
 @media (max-width: 916px){
 .div4 ul li {
@@ -166,19 +183,17 @@ border: 10px outset;
     padding-left:40px;
     padding-right: 40px;
 }
-.about{
+.about(
     margin-left: auto;
     margin-right: auto;
 
-}
-    .description{
+)
+.description(
 margin-left: auto;
 margin-right: auto;
 clear:left;
 float:left;
-}
-
-
+)
 }
 @media (max-width: 720px){
  .div4 ul li {
@@ -187,16 +202,16 @@ float:left;
  padding-left:30px;
  padding-right: 30px;
  }
- .about{
+ .about(
  margin-left: auto;
  margin-right: auto;
-}
-.description{
+)
+.description(
 margin-left: auto;
 margin-right: auto;
 clear:left;
 float:left;
-}
+)
 
 
 }
