@@ -239,17 +239,17 @@ button {
     padding-left:40px;
     padding-right: 40px;
 }
-.about(
+.about{
     margin-left: auto;
     margin-right: auto;
 
-)
-.description(
+}
+.description{
 margin-left: auto;
 margin-right: auto;
 clear:left;
 float:left;
-)
+}
 }
 @media (max-width: 720px){
  .div4 ul li {
@@ -258,16 +258,16 @@ float:left;
  padding-left:30px;
  padding-right: 30px;
  }
- .about(
+ .about{
  margin-left: auto;
  margin-right: auto;
-)
-.description(
+}
+.description{
 margin-left: auto;
 margin-right: auto;
 clear:left;
 float:left;
-)
+}
 
 
 }
