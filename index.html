@@ -28,43 +28,117 @@
             
         </div>
         <div class="div3">
-           <div class="main" ng-app="myApp" ng-controller="myController">
-<div class= "div5">
-  <h2>Bank Rating (For All Banks)</h2>
-  <form>
-    <ul>
-      <li>
-        <label>Personal Savings Account </label>
-        <input type="text" ng-blur="reset()" ng-model="weights.savings">
-      </li>
-      <li>
-        <label>Number of ATMs </label>
-        <input type="text" ng-blur="reset()" ng-model="weights.numAtms">
-      </li>
-      <li>
-        <label>Checking Fees </label>
-        <input type="text" ng-blur="reset()" ng-model="weights.checkingFees">
-      </li>
-      <li>
-        <label>Customer Service Rating </label>
-        <input type="text" ng-blur="reset()" ng-model="weights.custServ">
-      </li>
-      <li>
-        <label>Loan Acceptance Rate </label>
-        <input type="text" ng-blur="reset()" ng-model="weights.loanAcc">
-      </li>
-      <li>
-        <label>Total Percent: {{ calculateTotal() }}
-          <br>Percent Remaining: {{ 100 - calculateTotal()}}</label>
-        <button type="button" ng-show="calculateTotal() === 100" ng-click="finalScore()">Calculate Bank Scores</button>
-      </li>
-    </ul>
-  </form>
-  </div>
-  <div ng-repeat="(key, value) in allScores">
-    <p>{{key}}: {{value}}</p>
-  </div>
-</div>
+            <div class="main" ng-app="myApp" ng-controller="myController">
+        <h2>Bank Rating (For All Banks)</h2>
+        <form>
+            <ul>
+                <li>
+                    <label>Number of Branch Locations </label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.numBraches">
+                </li>
+                <li>
+                    <label>Bank Location Distribution </label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.branchLocDistribution">
+                </li>
+                <li>
+                    <label>Online Banking</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.onlineBankings">
+                </li>
+                <li>
+                    <label>Fee for Outside ATMs</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.atmFees">
+                </li>
+                <li>
+                    <label>Checking Account Fees</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.checkingFees">
+                </li>
+                
+                
+                
+                <li>
+                    <label>Savings Account Fees</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.savingsFees">
+                </li>
+                <li>
+                    <label>Overdraft Practices</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.overdraft">
+                </li>
+                <li>
+                    <label>Overdraft Thresholds and Limits</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.overdraftLimit">
+                </li>
+                <li>
+                    <label>Credit Cards</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.creditCards">
+                </li>
+                <li>
+                    <label>Credit Card Fees</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.creditCardFees">
+                </li>
+                
+                <li>
+                    <label>Loan Origination Marke Share</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.loanOriginationMarketShare">
+                </li>
+                <li>
+                    <label>Loan Acceptance Rate in NY State</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptNy">
+                </li>
+                <li>
+                    <label>Loan Acceptance Rate for Latino Borrowers</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLatino">
+                </li>
+                <li>
+                    <label>Loan Acceptance Rate for Black Borrowers</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptBlack">
+                </li>
+                <li>
+                    <label>Loan Acceptance Rate for Low to Moderate Income Borrowers</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLowIncome">
+                </li>
+                
+                    
+                <li>
+                    <label>Percentage of Total Low to Moderate Income Borrowers</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.percentLowBorrowers">
+                </li>
+                <li>
+                    <label>Loan Acceptance Rate for Low to Moderate Income Communities</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLowComm">
+                </li>
+                <li>
+                    <label>Percentage of Total in Communities of Color</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.percentCommColor">
+                </li>
+                <li>
+                    <label>Acceptance of Alternate Forms of Identification</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.acceptAltId">
+                </li>
+                <li>
+                    <label>Cost of Wire Transfers</label>
+                    <input type="text" ng-blur="reset()" ng-model="weights.wireTransferCost">
+                </li>
+                
+                
+                
+                <li>
+                    <label>Total Percent: {{ calculateTotal() }}
+                        <br>Percent Remaining: {{ 100 - calculateTotal()}}</label>
+                    <button type="button" ng-show="calculateTotal() === 100" ng-click="finalScore()">Calculate Bank Scores</button>
+                </li>
+            </ul>
+        </form>
+       
+
+        <table class="finalScores">
+            <tr><th>Bank Name</th><th>Overall Score</th></tr>
+            <tr ng-repeat="overall in allScores | orderBy: '-finalScore'"><td>{{overall.name}}</td><td>{{overall.finalScore}}</td></tr>
+        </table>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+
+    <script src="js/index.js"></script>
+
         </div>
         <div class="footer">
             <p>|INF362 Midterm Layout Design Home Page|</p>
