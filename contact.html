@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" type="text/css" href= "css/style.css">
+    </head>
+    <body>
+        <div class= "div1">
+            <h1>2015 Community Impact Report Card</h1>
+            <h2>Community Impact Report Card</h2>
+        </div>
+        <div class = "div4">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="default-page.html">Index</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="custom-page.html")Settings</a></li>
+            </ul>
+        </div>
+        <div class = div2>
+            <div class= about>
+                <h3>Contact Us</h3>
+                <h1 id="ourContact" onclick="changeTexty(this)">Email</h1>
+                <h1 id="ourContact" onclick="changeText(this)">Contact Info</h1>
+            </div>
+            
+        </div>
+        <div class="div3">
+            <p id="commentBlurb">Email:</p>
+            <input id="user">
+            <p id="commentBlurb">Name:</p>
+            <input id="user">
+            <p id="commentBlurb">Subject:</p>
+            <input id="user">
+            <p id="commentBlurb">Feedback, questions, concerns? Feel free to leave us a message here.</p>
+                    <button type="button" id="commentButton">Send</button>
+            <input id="comments" type="text">
+            <br>
+        </div>
+        <div class="footer">
+            <p>|INF362 Midterm Layout Design Home Page|</p>
+        </div>
+        <script>
+            function changeText(id) { 
+            id.innerHTML = "Contact: (518)777-5222";
+            }
+        </script>
+
+
+        
+
+        <script>
+            function changeTexty(id) { 
+            id.innerHTML = "teamfivehunnit@fake.org";
+            }   
+        </script>
+    </body>
+</html>
