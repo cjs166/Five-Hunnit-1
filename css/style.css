@@ -73,6 +73,10 @@ margin-right: auto;
  text-align: center;
  }
  .div3 {
+ 
+  background: url('image.jpg') no-repeat;
+  background-size:contain;
+	
  border-bottom: none;
  border:1px solid black;
  width:1000px;
